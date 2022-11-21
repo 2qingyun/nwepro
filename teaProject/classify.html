@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="./CSS/framework.css">
+	<style>
+		div>div.swiper {
+			width: 100%;
+			height: 450px;
+			text-align: center;
+		}
+
+		div>div.swiper>img {
+			min-width: 800px;
+			width: 100%;
+			height: 100%;
+		}
+
+		div>div.substance {
+			width: 888px;
+			height: 700px;
+			/* background: #ccc; */
+			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		div>div.substance>div.tables {
+			width: 150px;
+			height: 600px;
+			border: 1px solid #000;
+			background: #f6f6f6;
+		}
+
+		div>div.substance>div.tables>h3 {
+			text-align: center;
+			color: #fff;
+			background: #000;
+		}
+
+		div>div.substance>div.tables input {
+			width: 100px;
+			height: 20px;
+		}
+
+		div>div.substance>div.tables>span {
+			display: block;
+			width: 150px;
+			height: 20px;
+			position: relative;
+			top: 0;
+			left: 0;
+			border-bottom: 1px dashed #ccc;
+		}
+
+		div>div.substance>div.tables>a {
+			display: block;
+			width: 150px;
+			height: 30px;
+			border-bottom: 1px dashed #ccc;
+		}
+
+		div>div.substance>div.tables>a span {
+			position: relative;
+			top: 7px;
+			left: -22px;
+			width: 60px;
+			height: 20px;
+			display: block;
+			margin: 0 auto;
+			font-family: 微软雅黑;
+			color: #2b2b2b;
+			font-size: 13px;
+		}
+
+		div>div.substance>div.content {
+			width: 700px;
+			height: 700px;
+			display: flex;
+			flex-direction: row;
+		}
+
+		div>div.substance>div.content li {
+			width: 140px;
+			height: 200px;
+			text-align: center;
+
+		}
+
+		div>div.substance>div.content>li>span:nth-of-type(1) {
+			font-size: 12px;
+			font-family: 宋体;
+			color: #515151;
+		}
+
+		div>div.substance>div.content>li>span:nth-of-type(2) {
+			font-size: 13px;
+			font-family: 宋体;
+			color: #AAAAAA;
+		}
+
+		div>div.substance>div.content li>img {
+			width: 150px;
+			height: 140px;
+		}
+	</style>
+	<body>
+		<div>
+			<!-- 标题部分 -->
+			<div class='tele'>
+				<span>在线时间&nbsp;&nbsp;08:30~21:30</span>
+				<span>欢迎访问清风茶木在线商城！</span>
+				<span class="span_time">当前时间：<span>2022年</span><span>10月</span><span>20号</span><span>时</span><span>分</span><span>秒</span></span>
+				<div>
+					<a style="display: none;">用户</a>
+					<a href="./enter.html" onclick="logout()">注销</a>
+					<a href="./enter.html" style="display: none;">登录</a>
+					<a href="./register.html">注册</a>
+					<img src="./IMG/cart.png" style="height: 27px;">
+				</div>
+			</div>
+			<div class="navigate">
+				<img src="./IMG/tea.png" alt="茶道" style="height: 100px;">
+
+
+				<a href="./head.html">商城首页</a>
+				<a href="./classify.html">商品分类</a>
+				<a href="./commodity.html">我的道馆</a>
+				<a href="./text.html">关于茶道</a>
+				<input type="text" placeholder="茶道/花道/香道">
+				<img src="./IMG/search.png" style="height: 40px;">
+
+			</div>
+			<!-- 轮播图部分 -->
+			<div class="swiper">
+				<img src="./IMG/two.png">
+			</div>
+
+			<!-- 商品分类页面 -->
+			<div class="substance">
+				<div class="tables">
+					<h3>商品标签</h3>
+					<input type="text" placeholder="搜索商品">搜索
+					<span>&diams;显示所有</span><br>
+					<span>&diams;美之器物</span>
+					<a><span>&gt;茶壶</span></a>
+					<a><span>&gt;碗具</span></a>
+					<a><span>&gt;煮水壶</span></a>
+					<a><span>&gt;道杯</span></a>
+					<span>&diams;茶道配件</span>
+					<a><span>&gt;茶叶罐</span></a>
+					<a><span>&gt;茶承</span></a>
+					<a><span>&gt;茶炉</span></a>
+					<a><span>&gt;花器</span></a>
+					<span>&diams;南之茶木</span>
+					<a><span>&gt;乌龙</span></a>
+					<a><span>&gt;红茶</span></a>
+					<a><span>&gt;绿茶</span></a>
+					<a><span>&gt;白茶</span></a>
+				</div>
+				<div class="content" style="flex-wrap: wrap;">
+				</div>
+			</div>
+
+		</div>
+		<div class="bottom">
+			<div>
+				<span>About&nbsp;Change</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+					<img src="./IMG/./buttonImg/./zhifu1.png">
+					<img src="./IMG/./buttonImg/./zhifu2.png">
+					<img src="./IMG/./buttonImg/./zhifu3.png">
+				</div>
+			</div>
+			<div>
+				<span>Service</span>
+				<div><span>消费者保障服务、七天无理由退款、假一赔三</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+
+				</div>
+			</div>
+			<div>
+				<span>About&nbsp;Color</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Wechat</span>
+				<div>
+
+				</div>
+			</div>
+			<div>
+				<div><img src="./IMG/tea.png" style="height: 100px;width: 88px;"></div>
+				<br><span>Social&nbsp;APP</span>
+				<div><img src="./IMG/buttonImg/zhifu4.png" style="height: 20px;width: 115px;"></div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="JS/event.js"></script>
+		<script src="JS/jquery.niceHover.js"></script>
+		<script>
+			$(function() {
+				var arr = []
+				console.log(arr)
+				$(document).ready(function() { //页面初始化
+					$.getJSON('data.json', function(json) {
+						// console.log(json)
+						arr = json;
+						for (var i = 0; i < 3; i++) {
+							for (var j = 0; j < 4; j++) {
+								append_text(i, j, 0)
+							}
+						}
+					})
+				})
+				//大标题点击事件
+				$('div>div.substance>div.tables>span').click(function() {
+					$('div>div.substance>div.content').html('')
+					var nam = $(this).text().substr(1)
+					var sum = 0
+					if (nam == '显示所有') {
+						for (var i = 0; i < 3; i++) {
+							for (var j = 0; j < 4; j++) {
+								append_text(i, j, 0)
+							}
+						}
+					} else if (nam == '美之器物') {
+						circulate_obj(0)
+					} else if (nam == '茶道配件') {
+						circulate_obj(1)
+					} else {
+						circulate_obj(2)
+					}
+
+				})
+				//小标签点击事件
+				$('div>div.substance>div.tables>a>span').click(function() {
+					$('div>div.substance>div.content').html('')
+					var span_name = $(this).html().substr(4)
+					switch (span_name) {
+						case '茶壶':
+							cycle_obj(0, 0)
+							break;
+
+						case '碗具':
+							cycle_obj(0, 1)
+							break;
+
+						case '煮水壶':
+							cycle_obj(0, 2)
+							break;
+
+						case '道杯':
+							cycle_obj(0, 3)
+							break;
+
+						case '茶叶罐':
+							cycle_obj(1, 0)
+							break;
+
+						case '茶承':
+							cycle_obj(1, 1)
+							break;
+
+						case '茶炉':
+							cycle_obj(1, 2)
+							break;
+
+						case '花器':
+							cycle_obj(1, 3)
+							break;
+
+						case '乌龙':
+							cycle_obj(2, 0)
+							break;
+
+						case '红茶':
+							cycle_obj(2, 1)
+							break;
+
+						case '绿茶':
+							cycle_obj(2, 2)
+							break;
+
+						case '白茶':
+							cycle_obj(2, 3)
+							break;
+					}
+				})
+
+				function append_text(n, m, x) {
+					var tag = document.createElement('li') //创建li框架
+					var Img = document.createElement('img') //创建图片标签
+					var Span1 = document.createElement('span')
+					var Span2 = document.createElement('span')
+					var Br = document.createElement('br')
+					Img.setAttribute('src', arr[n].data[m].data[x].url) //给img添加地址
+					Span1.innerHTML = arr[n].data[m].data[x].name
+					Span2.innerHTML = arr[n].data[m].data[x].price
+					tag.appendChild(Img) //给li框架推荐内容
+					tag.appendChild(Span1)
+					tag.appendChild(Br)
+					tag.appendChild(Span2)
+					var obj = {
+						name: arr[n].data[m].data[x].name,
+						price: arr[n].data[m].data[x].price,
+						url: arr[n].data[m].data[x].url,
+						type: arr[n].type,
+						kind: arr[n].data[m].kind
+					}
+					$(tag).click(function() { //给每一个li添加一个点击事件
+						window.localStorage.setItem('Commodity', JSON.stringify(obj))
+						window.location.assign('./commodity.html')
+					})
+					$(tag).niceHover({
+						weight: 1,
+						color: '#ccc'
+					})
+
+
+					$('div>div.substance>div.content').append(tag) //向HTML添加内容
+				}
+				//遍历对象函数
+				function circulate_obj(n) {
+					var sum = 0
+					for (var i = 0; i < arr[n].data.length; i++) {
+						for (var j = 0; j < arr[n].data[i].data.length; j++) {
+							append_text(n, i, j)
+							sum++
+							if (sum >= 15) {
+								break;
+							}
+						}
+					}
+				}
+
+				function cycle_obj(n, m) {
+					for (var i = 0; i < arr[n].data[m].data.length; i++) {
+						append_text(n, m, i)
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

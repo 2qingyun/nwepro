@@ -1,0 +1,168 @@
+div.primary {
+		display: flex;
+		margin: 0 auto;
+		width: 900px;
+		height: 900px;
+	}
+
+	div>div.describe {
+		width: 710px;
+		height: 700px;
+		border: 2px dotted #ddd;
+	}
+
+	div>div.recommend {
+		width: 200px;
+		height: 700px;
+		border: 1px solid rgba(206, 206, 206, 1);
+		position: relative;
+		top: 0;
+		left: 15px;
+	}
+
+	div.primary>div.recommend span {
+		display: inline-block;
+		font-size: 13px;
+		font-family: 宋体;
+		color: #000;
+		margin: 0 19px;
+	}
+
+	div.primary>div.recommend>ul {
+		display: flex;
+		flex-wrap: wrap;
+		width: 200px;
+		height: 450px;
+	}
+
+	div.primary>div.recommend>ul>li {
+		width: 100px;
+		height: 125px;
+
+	}
+
+	div.primary>div.recommend>ul>li span:nth-of-type(1) {
+		font-size: 12px;
+		font-family: 微软雅黑;
+		color: #666666;
+		position: relative;
+		top: 0;
+		left: -12px;
+	}
+
+	div.primary>div.recommend>ul>li span:nth-of-type(2) {
+		font-size: 13px;
+		font-family: 宋体;
+		color: #adadad;
+		position: relative;
+		top: 0;
+		left: -4px;
+	}
+
+	div.primary>div.recommend>ul>li>img {
+		width: 70px;
+		height: 65px;
+	}
+
+	div.primary>div.describe>div:nth-of-type(1) {
+		width: 600px;
+		margin: 43px auto;
+		border-bottom: 1px dotted #ddd;
+	}
+
+	div.primary>div.describe>div:nth-of-type(2) {
+		width: 600px;
+		height: 300px;
+		display: flex;
+		margin: 0 auto;
+	}
+
+	div.primary>div.describe>div:nth-of-type(2)>div {
+		width: 300px;
+		height: 300px;
+
+	}
+
+	div.primary>div.describe>div:nth-of-type(2)>div>span {
+		display: inline-block;
+		margin: 16px 1px;
+	}
+
+	div.primary>div.describe>div:nth-of-type(2)>div>button {
+		display: block;
+		width: ;
+		background: #c90000;
+		color: #FFFFFF;
+		font-size: 16px;
+		font-family: 宋体;
+	}
+
+	div.primary>div.describe div:nth-of-type(3) {
+		width: 70px;
+		height: 60px;
+		position: relative;
+		top: -100px;
+		left: 120px;
+	}
+
+	div.primary>div.describe div:nth-of-type(4) {
+		width: 600px;
+		margin: -90px auto;
+	}
+
+	div.primary>div.describe div:nth-of-type(4)>a {
+		display: block;
+		width: 500px;
+		height: 20px;
+		border-top: 1px dotted #ddd;
+		font-size: 14px;
+		font-family: 宋体;
+		color: #333333;
+	}
+
+	div.primary>div.describe div:nth-of-type(4)>ul>li {
+		margin: 0.5rem 0;
+		font-size: 13px;
+		font-family: 宋体;
+		color: #666666;
+	}
+
+	div.primary>div.describe div:nth-of-type(5) {
+		margin: 100px 0;
+		display: flex;
+		width: 800px;
+		height: 300px;
+	}
+
+	div.primary>div.describe div:nth-of-type(5)>li {
+		margin: 0px -8px;
+		width: 180px;
+		height: 230px;
+	}
+
+	div.primary>div.describe div:nth-of-type(5)>li>img {
+		width: 150px;
+	}
+
+	div.primary>div.describe div:nth-of-type(5)>li>span {
+		display: block;
+		position: relative;
+		top: 0;
+		left: 43px;
+		font-size: 13px;
+		font-family: 宋体;
+		color: #515151;
+	}
+
+
+
+	.Songtypeface {
+		font-family: 宋体;
+		font-size: 12px;
+		color: #777777;
+	}
+
+	a {
+		text-decoration: none;
+		text-align: center;
+	}

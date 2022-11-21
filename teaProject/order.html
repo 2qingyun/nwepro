@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="./CSS/framework.css">
+	<style>
+		div.order_content {
+			display: flex;
+			flex-wrap: wrap;
+			width: 655px;
+			height: 600px;
+			background: #f2f2f2;
+			margin: 0 auto;
+		}
+
+		div.order_content>div.text {
+			width: 400px;
+			height: 600px;
+			/* background: lavender; */
+		}
+
+		div.order_content>div>form>input {
+			display: inline-block;
+			margin: 16px 53px;
+		}
+
+		div.order_content>div>form>select {
+			width: 345px;
+		}
+
+		div.order_content>div>form>textarea {
+			width: 345px;
+		}
+		div.order_content>div.order{
+			width: 245px;
+			height: 215px;
+			border: 1px solid #ccc;
+		}
+		div.order_content>div.order>div{
+			margin: 24px 37px;
+		}
+		div.order_content>div.order img{
+			width: 46px;
+			height: 44px;
+		}
+		div.order_content>div.order>div>span.span_text{
+			display: inline-block;
+			position: relative;
+			top: -15px;
+			left: 0;
+		}
+	</style>
+	<body>
+
+		<div class="wrap">
+			<!-- 标题部分 -->
+
+			<div class='tele'>
+				<span>本店在线时间&nbsp;&nbsp;08:30~21:30</span>
+				<span>欢迎访问清风茶木在线商城！</span>
+				<span
+					class="span_time">当前时间：<span>2022年</span><span>10月</span><span>20号</span><span>时</span><span>分</span><span>秒</span></span>
+				<div>
+					<a style="display: none;">用户</a>
+					<a href="./enter.html" onclick="logout()">注销</a>
+					<a href="./enter.html" style="display: none;">登录</a>
+					<a href="./register.html">注册</a>
+					<img src="./IMG/cart.png" style="height: 27px;">
+				</div>
+			</div>
+			<div class="navigate">
+				<img src="./IMG/tea.png" alt="茶道" style="height: 100px;">
+
+				<a href="./head.html">商城首页</a>
+				<a href="./classify.html">商品分类</a>
+				<a href="./commodity.html">我的道馆</a>
+				<a href="./text.html">关于茶道</a>
+				<input type="text" placeholder="茶道/花道/香道">
+				<img src="./IMG/search.png" style="height: 40px;">
+			</div>
+		</div>
+		<!-- 订单页面内容 -->
+		<div class="order_content">
+			<div class="text">
+				<form>
+					<h2>账单地址</h2>
+					<select name="" id="">
+						<option value="中国">中国</option>
+						<option value="不丹">不丹</option>
+						<option value="乌克兰">乌克兰</option>
+						<option value="丹麦">丹麦</option>
+					</select><br>
+					<input type="text">姓名
+					<input type="text">公司名字/家
+					<input type="text">地址<br>
+					<select name="" id="">省
+						<option value="北京市">北京市</option>
+						<option value="上海市">上海市</option>
+						<option value="苏州市">苏州市</option>
+						<option value="浙江市">浙江市</option>
+						<option value="天津市">天津市</option>
+						<option value="重庆市">重庆市</option>
+					</select><br>
+					<input type="text">邮政编码
+					<input type="text">Email地址*
+					<input type="text">电话*
+					<textarea name="" id="" cols="30" rows="10" placeholder="订单备注"></textarea>
+
+				</form>
+			</div>
+			<div class="order">
+				<h3 style="border-bottom:2px solid #ddd;">购物车总计</h3>
+				<div><span>购物车小计</span><span class="money">￥7600</span></div>
+				<div style="display: none;" class="clone_div"> <img src="./IMG/goodsimg/2.png" alt=""> <span class="span_text">商品名字</span></div>
+				<div style="border-bottom:2px solid #ddd;"  id="div_img"><span>运费</span><span>免运费</span></div>
+				<div style="border-bottom:3px solid grey;"><span>订单总计</span><span class="money">￥7800</span></div>
+				<input type="button" value="提交订单">
+			</div>
+		</div>
+
+		<!-- 底部内容 -->
+		<div class="bottom">
+			<div>
+				<span>About&nbsp;Change</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+					<img src="./IMG/./buttonImg/./zhifu1.png">
+					<img src="./IMG/./buttonImg/./zhifu2.png">
+					<img src="./IMG/./buttonImg/./zhifu3.png">
+				</div>
+			</div>
+			<div>
+				<span>Service</span>
+				<div><span>消费者保障服务、七天无理由退款、假一赔三</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+
+				</div>
+			</div>
+			<div>
+				<span>About&nbsp;Color</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Wechat</span>
+				<div>
+
+				</div>
+			</div>
+			<div>
+				<div><img src="./IMG/tea.png" style="height: 100px;width: 88px;"></div>
+				<br><span>Social&nbsp;APP</span>
+				<div><img src="./IMG/buttonImg/zhifu4.png" style="height: 20px;width: 115px;"></div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="JS/jquery.niceHover.js"></script>
+		<script src="JS/event.js"></script>
+		<script>
+			var arr = JSON.parse(window.localStorage.getItem('ShoppingCart')) | []
+			var money = 0
+			for (var key in arr) { //循环次数为数组对象的长度3
+				var tr = $('div.clone_div').clone(true)
+				$(tr).removeAttr('class')
+				$(tr).removeAttr('style')
+				tr.find('img').attr('src', arr[key].url)  //图片地址
+				tr.find('span').eq(1).html(arr[key].name) //商品名称
+				var price = parseInt(arr[key].price.substr(1))
+				var sum_price = arr[key].sum * price
+				// money = money + sum_price                      
+				$('span.money').html('￥' + sum_price) //商品总价
+			
+				$('div#div_img').before(tr)  //添加物品
+			
+			}
+		</script>
+
+	</body>
+</html>

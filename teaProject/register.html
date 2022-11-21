@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>注册</title>
+		<link href="./CSS/jq22.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="./CSS/framework.css">
+	</head>
+	<body>
+		<div>
+			<!-- 标题部分 -->
+			<div class='tele'>
+				<span>在线时间&nbsp;&nbsp;08:30~21:30</span>
+				<span>欢迎访问清风茶木在线商城！</span>
+				<span class="span_time">当前时间：<span>2022年</span><span>10月</span><span>20号</span><span>时</span><span>分</span><span>秒</span></span>
+				<div>
+					<a style="display: none;">用户</a>
+					<a href="./enter.html" onclick="logout()">注销</a>
+					<a href="./enter.html" style="display: none;">登录</a>
+					<a href="./register.html">注册</a>
+					<img src="./IMG/cart.png" style="height: 27px;">
+				</div>
+			</div>
+			<div class="navigate">
+				<img src="./IMG/tea.png" alt="茶道" style="height: 100px;">
+
+				<a href="./head.html">商城首页</a>
+				<a href="./classify.html">商品分类</a>
+				<a href="./commodity.html">我的道馆</a>
+				<a href="./text.html">关于茶道</a>
+				<input type="text" placeholder="茶道/花道/香道">
+				<img src="./IMG/search.png" style="height: 40px;">
+			</div>
+		</div>
+		<div class='body_main'>
+
+			<!-- start main content -->
+			<div class='index_box' style='margin-top:20px;'>
+				<div style="position:fixed;color:red;margin:70px 0 0 450px;font-size:16px;Z-index:100;display:block;"
+					id="hint"></div>
+				<div class='box_title'>
+					<div class='text_content'>
+						<h1>注册</h1>
+					</div>
+				</div>
+				<div class='box_main'>
+					<div id="register" class="register">
+						<form id="form">
+							<div id="form_submit" class="form_submit">
+								<div class="fieldset">
+									<div class="field-group">
+										<label class="required title">手机号码</label>
+										<span class="control-group" id="mobile_input">
+											<div class="input_add_long_background">
+												<input class="register_input" type="text" id="mobile" name="mobile"
+													maxLength="11" value="" onblur="__changeUserName('mobile');"
+													class="input_1">
+											</div>
+										</span>
+										<label class="tips">仅用于发送服务开通与到期提醒以及紧急故障方便联系到您，绝对保密</label>
+									</div>
+									<div class="field-group">
+										<label class="required title">邮箱</label>
+										<span class="control-group" id="email_input">
+											<div class="input_add_long_background">
+												<input class="register_input" type="text" id="email" name="email"
+													maxLength="50" value="" onblur="__changeUserName('email');"
+													class="input_2">
+											</div>
+										</span>
+										<label class="tips">请输入您常用的邮箱</label>
+									</div>
+									<div class="field-group">
+										<label class="required title">登录账号</label>
+										<span class="control-group" style="line-height:28px;">
+											<input id="way_mobile" type="radio" value="mobile" name="username" checked
+												onclick="__changeUserName('mobile');">
+											手机号码
+											<input id="way_email" type="radio" value="email" name="username"
+												onclick="__changeUserName('email');">
+											邮箱 </span>
+										<label class="tips" style="margin-bottom:5px;"
+											id="tooltext1">请选择以哪个作为您的登录账号</label>
+									</div>
+									<div class="field-group">
+										<label class="required title">设置密码</label>
+										<span class="control-group" id="password1_input">
+											<div class="input_add_long_background">
+												<input class="register_input" type="password" id="password1"
+													name="password1" maxLength="20" value=""
+													onblur="checkPwd1(this.value);" class="input_3" />
+											</div>
+										</span>
+										<label class="tips">请使用6~20个英文字母（区分大小写）、符号或数字</label>
+									</div>
+								</div>
+							</div>
+							<div id="div_submit" class="div_submit">
+								<div class='div_submit_button'>
+									<input id="submit" type="button" value="注册" class='button_button disabled'
+										onclick="check()">
+								</div>
+							</div>
+						</form>
+					</div>
+					<script>
+						var user = {}
+
+						function __changeUserName( of ) {
+							var username = $('#' + of ).val();
+							if ( of == 'email') {
+								if (username.search(/^[\w\.+-]+@[\w\.+-]+$/) == -1) {
+									showTooltips('email_input', '请输入正确的Email地址');
+
+									return;
+								}
+
+							} else {
+								if (username == '' || !isMobilePhone(username)) {
+									showTooltips('mobile_input', '请输入正确的手机号码');
+									return;
+								}
+
+							}
+						}
+
+						function checkPwd1(pwd1) {
+							if (pwd1.search(/^.{6,20}$/) == -1) {
+								showTooltips('password1_input', '密码为空或位数太少');
+							} else {
+
+							}
+						}
+
+						function checkEmail(email) {
+							if (email.search(/^.+@.+$/) == -1) {
+								showTooltips('email_input', '邮箱格式不正确');
+							} else {}
+						}
+
+						function check() {
+							// hideAllTooltips();
+							// console.log('111')
+							var ckh_result = true;
+							if ($('#email').val() == '') {
+								showTooltips('email_input', '邮箱不能为空');
+								ckh_result = false;
+							}
+							if ($('#password1').val() == '') {
+								showTooltips('password1_input', '密码不能为空');
+								ckh_result = false;
+							}
+							if ($('#mobile').val() == '' || !isMobilePhone($('#mobile').val())) {
+								showTooltips('mobile_input', '手机号码不正确');
+								ckh_result = false;
+							}
+							if ($('#verify').attr('checked') == false) {
+								showTooltips('checkbox_input', '对不起，您不同意Webluker的《使用协议》无法注册');
+								ckh_result = false;
+							}
+							user.mobile = $('input#mobile.register_input').val() //电话
+							user.email = $('input#email.register_input').val() //邮箱
+							user.password1 = $('input#password1.register_input').val() //密码
+							
+							var User = JSON.parse(window.localStorage.getItem('user'))
+							console.log(User)
+							if(User==null){
+								console.log('判断正确')
+								//重新初始化
+								User=[]
+								window.localStorage.setItem('user',User)
+							}
+							for (var key in User) {
+								if (User[key].mobile == user.mobile) {
+									alert('你的电话已经注册过，请直接登录！')
+								} else if (User[key].email == user.email) {
+									alert('你的邮箱已经被注册过，请直接登录！')
+									
+								} else {
+									console.log('执行缓存添加并跳转')
+									User.push(user)
+									window.localStorage.setItem('user', JSON.stringify(User))
+									window.localStorage.setItem('enter_condition',JSON.stringify(user))
+									window.location.replace('head.html')
+								}
+							}
+							User.push(user)
+							window.localStorage.setItem('user',JSON.stringify(User))  
+						}
+
+						function checkMobilePhone(telphone) {
+							if (telphone == '' || !isMobilePhone(telphone)) {
+								showTooltips('mobile_input', '请输入正确的手机号码');
+							} else {
+
+							}
+						}
+
+						function isMobilePhone(value) {
+							if (value.search(/^(\+\d{2,3})?\d{11}$/) == -1)
+								return false;
+							else
+								return true;
+						}
+					</script>
+				</div>
+				<div class='box_bottom'></div>
+			</div>
+
+			<!-- 底部内容 -->
+			<div class="bottom">
+				<div>
+					<span>About&nbsp;Change</span>
+					<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+					<span>Online&nbsp;Payment</span>
+					<div>
+						<img src="./IMG/./buttonImg/./zhifu1.png">
+						<img src="./IMG/./buttonImg/./zhifu2.png">
+						<img src="./IMG/./buttonImg/./zhifu3.png">
+					</div>
+				</div>
+				<div>
+					<span>Service</span>
+					<div><span>消费者保障服务、七天无理由退款、假一赔三</span></div>
+					<span>Online&nbsp;Payment</span>
+					<div>
+
+					</div>
+				</div>
+				<div>
+					<span>About&nbsp;Color</span>
+					<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+					<span>Wechat</span>
+					<div>
+
+					</div>
+				</div>
+				<div>
+					<div><img src="./IMG/tea.png" style="height: 100px;width: 88px;"></div>
+					<br><span>Social&nbsp;APP</span>
+					<div><img src="./IMG/buttonImg/zhifu4.png" style="height: 20px;width: 115px;"></div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script language='javascript' src="./JS/jq22.js"></script>
+		<script src="JS/event.js"></script>
+
+	</body>
+</html>

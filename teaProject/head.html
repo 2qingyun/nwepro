@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="./CSS/framework.css">
+	<style>
+		div>div.swiper {
+			width: 1500px;
+			height: 450px;
+			text-align: center;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		div>div.swiper>img {
+			margin: 0 10px;
+			min-width: 50rem;
+			width: 1500px;
+			height: 100%;
+		}
+		div>div.newproduct {
+			width: 800px;
+			height: 400px;
+			display: flex;
+			flex-direction: row;
+			margin: 0 auto;
+			border-bottom: 2px dashed #ccc;
+		}
+		div>div.newproduct>ul {
+			width: 590px;
+			height: 400px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		div>div.newproduct>p {
+			align-self: center;
+			font-size: 25px;
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			border-right: 2px dashed #ccc;
+		}
+		div>div.newproduct>ul>li {
+			width: 140px;
+			height: 200px;
+			text-align: center;
+
+		}
+
+		div>div.newproduct>ul>li>img {
+			width: 150px;
+			height: 140px;
+
+		}
+		
+	</style>
+	<body>
+		<div class="wrap">
+			<!-- 标题部分 -->
+
+			<div class='tele'>
+				<span>本店在线时间&nbsp;&nbsp;08:30~21:30</span>
+				<span>欢迎访问清风茶木在线商城！</span>
+				<span class="span_time">当前时间：<span>2022年</span><span>10月</span><span>20号</span><span>时</span><span>分</span><span>秒</span></span>
+				<div>
+					<a style="display: none;">用户</a>
+					<a href="./enter.html" onclick="logout()">注销</a>
+					<a href="./enter.html" style="display: none;">登录</a>
+					<a href="./register.html">注册</a>
+					<img src="./IMG/cart.png" style="height: 27px;">
+				</div>
+			</div>
+			<div class="navigate">
+				<img src="./IMG/tea.png" alt="茶道" style="height: 100px;">
+
+				<a href="./head.html">商城首页</a>
+				<a href="./classify.html">商品分类</a>
+				<a href="./commodity.html">我的道馆</a>
+				<a href="./text.html">关于茶道</a>
+				<input type="text" placeholder="茶道/花道/香道">
+				<img src="./IMG/search.png" style="height: 40px;">
+			</div>
+			<!-- 轮播图部分 -->
+			<div class="swiper" style="overflow: hidden;">
+				<img src="./IMG/1.png">
+				<img src="./IMG/bg.jpg" style="display: none;">
+				<img src="./IMG/bg2.png" style="display: none;">
+				<img src="./IMG/1.png">
+			</div>
+
+			<!-- 商品内容部分 -->
+			<div class="newproduct" id="content_1">
+				<p>新品上市</p>
+				<p style="display: none;">茶叶罐</p>
+
+				<ul>
+					<li>
+						<img src="./IMG/goodsimg/1.png" alt="">
+						<span>锡制茶叶罐</span><br>
+						<span>￥5600</span>
+
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/2.png" alt="">
+						<span>银质茶叶罐</span><br>
+						<span>￥3800</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/3.png" alt="">
+						<span>银壶煮水壶</span><br>
+						<span>￥2400</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/kettle_Img/3.png" alt="">
+						<span>公道杯</span><br>
+						<span>￥29900</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/kettle_Img/5.png" alt="">
+						<span>柴烧花器</span><br>
+						<span>￥31800</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/kettle_Img/4.png" alt="">
+						<span>香炉</span><br>
+						<span>￥590</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/kettle_Img/2.png" alt="">
+						<span>白泥提梁煮水壺</span><br>
+						<span>￥5900</span>
+					</li>
+
+				</ul>
+			</div>
+			<div class="newproduct" id="content_2">
+				<p>热卖商品</p>
+				<p style="display: none;">南之茶木</p>
+				<ul>
+					<li>
+						<img src="./../teaProject/IMG/goodsimg/black_tea/1.png" alt="">
+						<span>祁门红茶</span><br>
+						<span>￥499</span>
+
+					</li>
+					<li>
+						<img src="./../teaProject/IMG/goodsimg/black_tea/2.png" alt="">
+						<span>正山小种</span><br>
+						<span>￥99</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/green_tea/2.png" alt="">
+						<span>西湖龙井</span><br>
+						<span>￥600</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/green_tea/3.png" alt="">
+						<span>洞庭湖碧螺春</span><br>
+						<span>￥700</span>
+					</li>
+					<li>
+						<img src="./../teaProject/IMG/goodsimg/black_tea/1.png" alt="">
+						<span>祁门红茶</span><br>
+						<span>￥499</span>
+
+					</li>
+				</ul>
+			</div>
+			<div class="newproduct" id="content_3">
+				<p>美之器物</p>
+				<p style="display: none;">盖碗</p>
+
+				<ul>
+					<li>
+						<img src="./IMG/goodsimg/teapot_Img/1.png" alt="">
+						<span>纯银仿古侧把壶</span><br>
+						<span>￥5900</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/teapot_Img/2.png" alt="">
+						<span>日本急須南蠻燒</span><br>
+						<span>￥2</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/teapot_Img/4.png" alt="">
+						<span>回流老朱泥紫砂</span><br>
+						<span>￥890</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/covered_teacup/4.png" alt="">
+						<span>玻璃蓋碗</span><br>
+						<span>￥590</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/covered_teacup/3.png" alt="">
+						<span>白瓷盖碗</span><br>
+						<span>￥790</span>
+					</li>
+					<li>
+						<img src="./IMG/goodsimg/teapot_Img/5.png" alt="">
+						<span>白瓷倒把壺</span><br>
+						<span>￥590</span>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+		<!-- 底部内容 -->
+		<div class="bottom">
+			<div>
+				<span>About&nbsp;Change</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+					<img src="./IMG/./buttonImg/./zhifu1.png">
+					<img src="./IMG/./buttonImg/./zhifu2.png">
+					<img src="./IMG/./buttonImg/./zhifu3.png">
+				</div>
+			</div>
+			<div>
+				<span>Service</span>
+				<div><span>消费者保障服务、七天无理由退款、假一赔三</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+
+				</div>
+			</div>
+			<div>
+				<span>About&nbsp;Color</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Wechat</span>
+				<div>
+
+				</div>
+			</div>
+			<div>
+				<div><img src="./IMG/tea.png" style="height: 100px;width: 88px;"></div>
+				<br><span>Social&nbsp;APP</span>
+				<div><img src="./IMG/buttonImg/zhifu4.png" style="height: 20px;width: 115px;"></div>
+			</div> 
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<!-- <script src="JS/bubbleCursor.js"></script> -->
+		<script src="JS/jquery.niceHover.js"></script>
+		<script src="JS/event.js"></script>
+		<script>
+			$(function() {
+				//新品上市的点击事件
+				$('div#content_1>ul>li').click(function() {
+					var tea_type = $('div#content_1>p').eq(0).html()
+					var tea_kind = $('div#content_1>p').eq(1).html()
+					var thes = this
+					append_cache(thes, tea_type, tea_kind)
+				})
+				//热卖商品的点击事件
+				$('div#content_2>ul>li').click(function() {
+					var tea_type = $('div#content_2>p').eq(0).html()
+					var tea_kind = $('div#content_2>p').eq(1).html()
+					var thes = this
+					append_cache(thes, tea_type, tea_kind)
+				})
+				//美器之物的点击事件
+				$('div#content_3>ul>li').click(function() {
+					var tea_type = $('div#content_3>p').eq(0).html()
+					var tea_kind = $('div#content_3>p').eq(1).html()
+					var thes = this
+					append_cache(thes, tea_type, tea_kind)
+				})
+				
+				//点缓存的事件
+				function append_cache(thes, tea_type, tea_kind) {
+					var tea_url = $(thes).find('img').attr('src')
+					var tea_name = $(thes).find('span').first().html()
+					var tea_price = $(thes).find('span').first().next().next().html()//中间有一个br，所以是下两个
+					
+					var obj = {
+						name: tea_name,
+						price: tea_price,
+						url: tea_url,
+						type: tea_type,
+						kind: tea_kind
+					}
+					window.localStorage.setItem('Commodity', JSON.stringify(obj))
+					window.location.assign('./commodity.html')
+				}
+
+				//轮播图的效果显示
+				var time = 0
+				var swiper = setInterval(function() {
+					time = time % ($('div.swiper>img').length - 1)
+					if (time == 2) {
+						$('div.swiper>img').eq(2).fadeOut(1000, function() {
+							$('div.swiper>img').eq(0).fadeIn(1000, function() {
+								time++
+							})
+						})
+					} else {
+						$('div.swiper>img').eq(time).fadeOut(1000, function() {
+							$('div.swiper>img').eq(time).next().fadeIn(1000, function() {
+								time++
+							})
+						})
+
+					}
+					// $('div.swiper>img').eq(time).fadeOut().next().fadeIn()
+					// time++
+				}, 3000)
+				$('div>div.newproduct>ul>li').niceHover({
+					weight: 1,
+					color: '#ccc'
+				});
+				$('div>div.newproduct>ul>li>span').mouseover(function() {
+					$(this).css({
+						'background': '#000',
+						'color': '#fff'
+					})
+				})
+				$('div>div.newproduct>ul>li>span').mouseout(function() {
+					$(this).css({
+						'background': '#fff',
+						'color': '#000'
+					})
+				})
+			})
+		</script>
+
+	</body>
+</html>

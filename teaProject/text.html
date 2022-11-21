@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="./CSS/framework.css">
+	<style>
+		div>div.text {
+			width: 800px;
+			height: 1500px;
+			margin: 100px auto;
+			/* background-image:url('./../teaProject/IMG/textImg/chadao.png') ; */
+		}
+
+		div>div.text div:nth-of-type(1)>span {
+			font-size: 26px;
+			font-family: 宋体;
+			color: #000;
+		}
+
+		div>div.text div:nth-of-type(2)>span {
+			font-size: 14px;
+			font-family: 'Times New Roman';
+			color: #a9a9a9
+		}
+
+		div>div.text>img {
+			width: 670px;
+			height: 190px;
+		}
+
+		div>div.text span.divSpan {
+			font-size: 20px;
+			font-family: 宋体;
+			color: #000;
+		}
+
+		div>div.text span.textSpan {
+			font-size: 14px;
+			font-family: 宋体;
+			color: #808080;
+		}
+
+		div>div.text>div {
+			width: 670px;
+		}
+	</style>
+	<body>
+		<div>
+			<div class='tele'>
+				<span>在线时间&nbsp;&nbsp;08:30~21:30</span>
+				<span>欢迎访问清风茶木在线商城！</span>
+				<span class="span_time">当前时间：<span>2022年</span><span>10月</span><span>20号</span><span>时</span><span>分</span><span>秒</span></span>
+				<div>
+					<a style="display: none;">用户</a>
+					<a href="./enter.html" onclick="logout()">注销</a>
+					<a href="./enter.html" style="display: none;">登录</a>
+					<a href="./register.html">注册</a>
+					<img src="./IMG/cart.png" style="height: 27px;">
+
+				</div>
+			</div>
+			<div class="navigate">
+				<img src="./IMG/tea.png" alt="茶道" style="height: 100px;">
+
+				<a href="./head.html">商城首页</a>
+				<a href="./classify.html">商品分类</a>
+				<a href="./commodity.html">我的道馆</a>
+				<a href="./text.html">关于茶道</a>
+				<input type="text" placeholder="茶道/花道/香道">
+				<img src="./IMG/search.png" style="height: 40px;">
+			</div>
+			<div class="text">
+				<div><span>茶道的故事</span></div>
+				<div><span>tea culture</span></div>
+				<img src="./IMG/textImg/text1.jpg" alt="">
+				<div><span class="divSpan">茶道文化</span></div>
+				<div><span class="textSpan">茶文化是一种“中介”文化，以茶为载体，以能体现东方国家的传统思想道德、
+						人文精神为宗旨，包括有关茶的礼仪、风俗、茶法、茶规、茶技、茶艺、历史典故、民间
+						传说以及文学艺术、辞曲歌赋等。茶文化是一种“综合”文化，涉及到建筑、音乐、舞蹈、
+						绘画、戏曲、服饰、饮食、医药等诸多文化领域。茶道文化源于中国，南宋时期传入日本
+						和朝鲜，元朝时在中国衰落。 现如今已，茶道文化在日本流行并发扬光大，成为世界茶道
+						文化的典型代表。</span></div>
+				<img src="./IMG/textImg/text2.jpg" alt="">
+				<div><span class="divSpan">禅宗渊源</span></div>
+				<div><span class="textSpan">僧人饮茶历史悠久，因茶有“三德”，利于丛林修持，由“茶之德”生发出禅宗茶
+						道。 僧人种茶、制茶、饮茶并研制名茶，为中国茶叶生产的发展、茶学的发展、茶道的形
+						成立下不世之功劳。日本茶道基本上归属禅宗茶道，源于中国但青出于蓝而胜于蓝。</span></div>
+				<img src="./IMG/textImg/text5.png" alt="">
+				<div><span class="divSpan">茶道礼仪</span></div>
+				<div><span class="textSpan">泡茶的五大茶礼分别为酒满敬人，茶满欺人；先客后主，司炉最末；喝茶皱眉，
+						表示弃嫌；新客换茶；及时添加茶水，泡茶是一门技术，同时也是一种生活态度，正确的方
+						式会令人舒服，因此在品茶、泡茶的过程中，我们需要注重礼仪的得当性。中国的茶桌上始
+						终遵守着“尊老爱幼”的传统。在第一次给客人斟茶时，要尊老卑幼，第二次的时候就可以按
+						照顺序来斟茶了。同时在这一过程中要注意的是，主人要到客人前面道声“请用茶”，客人则
+						回应“谢谢”、“莫客气”。如果是客人较多的话，则不便收回茶杯，放于客人桌前就可以了。
+						客人在接受主人斟茶的时候要有所感谢，即长辈用食指在桌上轻弹两下，小辈平辈的用食、
+						中指在桌面轻弹两次。同时注意及时添加茶水，茶水以七分满为佳，不宜太满。</span></div>
+			</div>
+		</div>
+
+		<div class="bottom">
+			<div>
+				<span>About&nbsp;Change</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+					<img src="./IMG/./buttonImg/./zhifu1.png">
+					<img src="./IMG/./buttonImg/./zhifu2.png" <img src="./IMG/./buttonImg/./zhifu3.png">
+				</div>
+			</div>
+			<div>
+				<span>Service</span>
+				<div><span>消费者保障服务、七天无理由退款、假一赔三</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+
+				</div>
+			</div>
+			<div>
+				<span>About&nbsp;Color</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Wechat</span>
+				<div>
+
+				</div>
+			</div>
+			<div>
+				<div><img src="./IMG/tea.png" style="height: 100px;width: 88px;"></div>
+				<br><span>Social&nbsp;APP</span>
+				<div><img src="./IMG/buttonImg/zhifu4.png" style="height: 20px;width: 115px;"></div>
+			</div>
+			<!-- <span>x<sup>1</sup></span> -->
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="JS/event.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,201 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+div>div.tele>div {
+	position: relative;
+	top: -2px;
+	left: 500px;
+}
+
+div>div.tele>div>img {
+	position: relative;
+	top: 4px;
+	left: 0;
+}
+
+div>div.tele>div>sup {
+	position: relative;
+	top: -4px;
+	left: -4px;
+	font-size: 12px;
+	display: inline-block;
+	color: #fff;
+	background: red;
+	height: 17px;
+	width: 17px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+div>div.tele>div>a {
+	font-size: 14px;
+	font-family: 微软雅黑;
+	color: #757575;
+	text-decoration: none;
+}
+
+div>div.tele {
+	height: 40px;
+	background: #ccc;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	z-index: 5555;
+}
+
+div>div.tele span:nth-of-type(1) {
+	position: relative;
+	top: 0px;
+	left: 180px;
+	font-family: 微软雅黑;
+}
+
+div>div.tele span:nth-of-type(2) {
+	position: relative;
+	top: 0px;
+	left: 280px;
+}
+
+div>div.navigate>a {
+	min-width: 80px;
+	width: 100px;
+	height: 40px;
+	margin: 0 auto;
+	position: relative;
+	top: 40px;
+	left: 10px;
+	text-decoration: none;
+	color: #000;
+}
+
+/* div>div.navigate li {
+	min-width: 80px;
+	width: 100px;
+	height: 40px;
+	margin: 0 auto;
+	position: relative;
+	top: 40px;
+	left: 10px;
+} */
+
+div>div.navigate {
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background: #fff;
+	/* background-image: url('../IMG/bg.jpg'); */
+	border: 2px dotted #ccc;
+	overflow: hidden;
+}
+
+div>div.navigate>input {
+	border: 2px solid #000;
+	height: 30px;
+	width: 200px;
+}
+
+
+div.bottom {
+	height: 200px;
+	background: #f7f7f7;
+	display: flex;
+	justify-content: space-between;
+}
+
+div.bottom>div {
+	width: 200px;
+	height: 200px;
+}
+
+div.bottom>div>span {
+	letter-spacing: 3px;
+	display: block;
+	width: 150px;
+	font-size: 18px;
+	font-family: 'Times New Roman';
+	color: #000;
+
+}
+
+div.bottom>div div:nth-of-type(1) {
+	width: 150px;
+	height: 90px;
+	margin: 30px 0 0 0;
+}
+
+div.bottom>div>div>span {
+	color: #bbbbbb;
+	font-size: 12px;
+	font-family: 宋体;
+
+}
+
+div.bottom>div>div>img {
+	width: 34px;
+	height: 34px;
+}
+
+div.bottom>div>div img:nth-of-type(1) {
+	width: 49px;
+	height: 34px;
+}
+
+.hover-border {
+	display: inline-block;
+	position: absolute;
+	z-index: 100
+}
+
+.left-right-border {
+	height: 0;
+}
+
+.left-border {
+	top: 0px;
+	left: 0px;
+}
+
+.right-border {
+	right: 0px;
+	bottom: 0px;
+}
+
+.left-right-top-bottom-border {
+	width: 0;
+}
+
+.left-top-border {
+	right: 50%;
+	top: 0px;
+}
+
+.left-bottom-border {
+	left: 0px;
+	bottom: 0px;
+}
+
+.right-top-border {
+	right: 0px;
+	top: 0px;
+}
+
+.right-bottom-border {
+	left: 50%;
+	bottom: 0px;
+}
+
+div>div.tele>span.span_time {
+	position: relative;
+	top: 0;
+	left: 306px;
+}
+
+div>div.tele>span.span_time span {
+	position: relative;
+	top: 0;
+	left: 0;
+}

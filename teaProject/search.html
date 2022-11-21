@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="./CSS/framework.css">
+		<style>
+			div.search {
+				margin: 0 auto;
+				width: 800px;
+				/* height: 700px; */
+				min-height: 800px;
+
+			}
+
+			div.search>div>span {
+				display: inline-block;
+				position: relative;
+				left: 330px;
+				top: 0;
+			}
+
+			div.search>div>li {
+				width: 190px;
+				height: 200px;
+				border: 1px dashed #000;
+				margin: 8px 4px;
+			}
+
+			div.search>div>li>img {
+				width: 170px;
+				height: 155px;
+			}
+
+			div.search>div>li>span {
+				display: inline-block;
+				position: relative;
+				top: -23px;
+				left: 47px;
+			}
+
+			div.search>div>li>span:nth-of-type(1) {
+				font-size: 14px;
+				font-family: 宋体;
+				color: #373a41
+			}
+
+			div.search>div>li>span:nth-of-type(2) {
+				font-size: 13px;
+				font-family: 宋体;
+				color: #AAAAAA;
+				left: 62px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<!-- 标题部分 -->
+
+			<div class='tele'>
+				<span>在线时间&nbsp;&nbsp;08:30~21:30</span>
+				<span>欢迎访问清风茶木在线商城！</span>
+				<span class="span_time">当前时间：<span>2022年</span><span>8月</span><span>17号</span><span>时</span><span>分</span><span>秒</span></span>
+				<div>
+					<a style="display: none;">用户</a>
+					<a href="./enter.html" onclick="logout()">注销</a>
+					<a href="./enter.html" style="display: none;">登录</a>
+					<a href="./register.html">注册</a>
+					<img src="./IMG/cart.png" style="height: 27px;">
+				</div>
+			</div>
+			<div class="navigate">
+				<img src="./IMG/tea.png" alt="茶道" style="height: 100px;">
+
+				<a href="./head.html">商城首页</a>
+				<a href="./classify.html">商品分类</a>
+				<a href="./commodity.html">我的道馆</a>
+				<a href="./text.html">关于茶道</a>
+				<input type="text" placeholder="茶道/花道/香道">
+				<img src="./IMG/search.png" style="height: 40px;">
+			</div>
+		</div>
+
+		<!-- 搜索页面内容 -->
+		<div class="search">
+			<div><span style="font-size: 26px;font-family: 宋体;color: #000">搜索结果</span></div>
+			<div><span
+					style="left: 341px;font-size: 14px;font-family: 'Times New Roman';color: #a9a9a9;">Search&nbsp;Result</span>
+			</div>
+			<div class="content" style="display: flex;flex-wrap: wrap;">
+			</div>
+		</div>
+
+		<!-- 底部内容 -->
+		<div class="bottom">
+			<div>
+				<span>About&nbsp;Change</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+					<img src="./IMG/./buttonImg/./zhifu1.png">
+					<img src="./IMG/./buttonImg/./zhifu2.png">
+					<img src="./IMG/./buttonImg/./zhifu3.png">
+				</div>
+			</div>
+			<div>
+				<span>Service</span>
+				<div><span>消费者保障服务、七天无理由退款、假一赔三</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+
+				</div>
+			</div>
+			<div>
+				<span>About&nbsp;Color</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Wechat</span>
+				<div>
+
+				</div>
+			</div>
+			<div>
+				<div><img src="./IMG/tea.png" style="height: 100px;width: 88px;"></div>
+				<br><span>Social&nbsp;APP</span>
+				<div><img src="./IMG/buttonImg/zhifu4.png" style="height: 20px;width: 115px;"></div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="JS/event.js"></script>
+		<script src="JS/jquery.niceHover.js"></script>
+		<script>
+			$(function() {
+				cycle_obj()
+				var arr = []
+
+				function cycle_obj() {
+					$('div.content').html('')
+					$.getJSON('data.json', function(json) {
+						arr = json
+						//精准查询的语句
+						for (var i = 0; i < arr.length; i++) { //选择type
+							for (var j = 0; j < arr[i].data.length; j++) { //选择kind
+								for (var sum = 0; sum < arr[i].data[j].data.length; sum++) { //匹配对应的每一个值
+									var input_val = window.localStorage.getItem('input_Cache') //获取缓存的值
+									var span_name = arr[i].data[j].data[sum].name //data.json的数据值
+									var span_type=arr[i].data[j].data[sum].kind   //data.json的数据类型
+									var pattern = new RegExp(input_val)
+									if (pattern.test(span_name)) {
+										append_text(i, j, sum)
+									}
+
+								}
+							}
+						}
+						//模糊查询的语句
+						for (var i = 0; i < arr.length; i++) { //选择type
+						
+							for (var j = 0; j < arr[i].data.length; j++) { //选择kind
+							var input_val = window.localStorage.getItem('input_Cache') //获取缓存的值
+							var span_type=arr[i].data[j].kind   //data.json的数据类型
+							var pattern = new RegExp(input_val)
+							if(pattern.test(span_type)){
+								for (var sum = 0; sum < arr[i].data[j].data.length; sum++) { //匹配对应的每一个值
+										append_text(i, j, sum)
+										// console.log(arr[i].data[j].kind)
+								}
+							}
+							}
+						}
+					})
+
+				}
+				$('div>div.navigate>img').off('click')
+				$('div>div.navigate>img').on('click', function() {
+					var input_value = $('div>div.navigate>input').val() //输入框的值
+					window.localStorage.setItem('input_Cache', input_value) //加入缓存
+					cycle_obj()
+				})
+				$(window).off('keydown')
+				$(window).on('keydown', function(e) {
+					var input_value = $('div>div.navigate>input').val() //输入框的值
+					window.localStorage.setItem('input_Cache', input_value) //加入缓存
+					if (e.keyCode == 13) {
+						cycle_obj()
+						console.log($('div.content').html().length)
+					}
+					// if($('div.content').html().length==0){
+					// 	alert('抱歉你想要的东西我们暂时无法提供，请谅解！')
+					// }
+
+				})
+				//添加商品内容方法
+				function append_text(n, m, x) {
+					var tag = document.createElement('li') //创建li框架
+					var Img = document.createElement('img') //创建图片标签
+					var Span1 = document.createElement('span')
+					var Span2 = document.createElement('span')
+					var Br = document.createElement('br')
+					Img.setAttribute('src', arr[n].data[m].data[x].url) //给img添加地址
+					Span1.innerHTML = arr[n].data[m].data[x].name
+					Span2.innerHTML = arr[n].data[m].data[x].price
+					tag.appendChild(Img) //给li框架推荐内容
+					tag.appendChild(Span1)
+					tag.appendChild(Br)
+					tag.appendChild(Span2)
+					var obj = {
+						name: arr[n].data[m].data[x].name,
+						price: arr[n].data[m].data[x].price,
+						url: arr[n].data[m].data[x].url,
+						type: arr[n].type,
+						kind: arr[n].data[m].kind
+					}
+					$(tag).click(function() { //给每一个li添加一个点击事件
+						window.localStorage.setItem('Commodity', JSON.stringify(obj))
+						window.location.assign('./commodity.html')
+					})
+					$('div.content').append(tag) //向HTML添加内容
+				}
+			})
+		</script>
+	</body>
+</html>

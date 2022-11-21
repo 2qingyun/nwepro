@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="./CSS/framework.css">
+	<style>
+		div.form {
+			margin: 0 auto;
+			width: 840px;
+			height: 700px;
+			border: 2px dotted #ccc;
+			overflow: overlay;
+		}
+
+		div.form>table th {
+			font-size: 16px;
+			font-family: 微软雅黑;
+			color: #555555;
+
+		}
+
+		hr {
+			position: relative;
+			top: 30px;
+			left: 0;
+			height: 4px;
+			width: 562px;
+			background: #c7c0c7;
+		}
+
+		div.form>table img {
+			width: 101px;
+			height: 107px;
+		}
+
+
+		div.form>table>tbody>tr>td>span {
+			display: inline-block;
+			position: relative;
+			top: 0px;
+			left: 26px;
+		}
+
+		div.form>table>tbody>tr>td:nth-of-type(1)>span {
+			display: inline-block;
+			position: relative;
+			top: -44px;
+			left: 0;
+		}
+
+		div.form>table>tbody>tr>td:nth-of-type(4)>span {
+			display: inline-block;
+			position: relative;
+			top: 0px;
+			left: 18px;
+		}
+
+		div.form>table>tbody>tr>td>img {
+			margin: 0 30px;
+		}
+
+		div.form>div.order {
+			position: relative;
+			top: -10px;
+			left: 595px;
+			width: 200px;
+			height: 130px;
+			font-size: 14px;
+			font-family: 微软雅黑;
+			color: #555555;
+		}
+
+		div.form>div.order>div {
+			margin: 14px 0;
+		}
+
+		div.form>div.order>div>span:nth-of-type(2) {
+			float: right;
+			display: inline-block;
+			text-align: right;
+		}
+
+		div.form>div.order>input {
+			margin: 6px 12px;
+			display: inline-block;
+			width: 175px;
+			height: 28px;
+			border: 1px solid #c7c0c7;
+			background: #f7f6f7;
+		}
+	</style>
+	<body>
+
+
+		<div>
+			<!-- 标题部分 -->
+			<div class='tele'>
+				<span>在线时间&nbsp;&nbsp;08:30~21:30</span>
+				<span>欢迎访问清风茶木在线商城！</span>
+				<span class="span_time">当前时间：<span>2022年</span><span>8月</span><span>17号</span><span>时</span><span>分</span><span>秒</span></span>
+				<div>
+					<a style="display: none;">用户</a>
+					<a href="./enter.html" onclick="logout()">注销</a>
+					<a href="./enter.html" style="display: none;">登录</a>
+					<a href="./register.html">注册</a>
+					<img src="./IMG/cart.png" style="height: 27px;">
+				</div>
+			</div>
+			<div class="navigate">
+				<img src="./IMG/tea.png" alt="茶道" style="height: 100px;">
+
+				<a href="./head.html">商城首页</a>
+				<a href="./classify.html">商品分类</a>
+				<a href="./commodity.html">我的道馆</a>
+				<a href="./text.html">关于茶道</a>
+				<input type="text" placeholder="茶道/花道/香道">
+				<img src="./IMG/search.png" style="height: 40px;">
+			</div>
+		</div>
+		<!-- 购物车页内容 -->
+		<div class="form">
+			<table style="width:600px;">
+				<hr>
+				<tr>
+					<th style="width: 340px;text-align: left;">商品</th>
+					<th>价格</th>
+					<th>数量</th>
+					<th>合计</th>
+				</tr>
+				<tr id="clone" style="display:none;" class="tr_syle">
+					<td>
+						<span style="font-size: 25px;" class="remove">×</span>
+						<img src="./IMG/goodsimg/1.png">
+						<span style="display: inline-block;width: 145px;">商品名称</span>	
+					</td>
+					<td><span>￥3800</span></td>
+					<td><span>1</span></td>
+					<td><span>￥3800</span></td>
+				</tr>
+			</table>
+
+			<div class="order">
+				<h3 style="border-bottom:2px solid #ddd;">购物车总计</h3>
+				<div><span>购物车小计</span><span>￥7600</span></div>
+				<div style="border-bottom:2px solid #ddd;"><span>运费</span><span>免运费</span></div>
+				<div style="border-bottom:3px solid grey;"><span>订单总计</span><span>￥7800</span></div>
+				<input type="button" value="前往收银台">
+			</div>
+		</div>
+		<!-- 底部内容 -->
+		<div class="bottom">
+			<div>
+				<span>About&nbsp;Change</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Online&nbsp;Payment</span>
+				<div>
+					<img src="./IMG/./buttonImg/./zhifu1.png">
+					<img src="./IMG/./buttonImg/./zhifu2.png">
+					<img src="./IMG/./buttonImg/./zhifu3.png">
+				</div>
+			</div>
+			<div>
+				<span>Service</span>
+				<div><span>消费者保障服务、七天无理由退款、假一赔三</span></div>
+				<span>Online&nbsp;Payment</span>
+			</div>
+			<div>
+				<span>About&nbsp;Color</span>
+				<div><span>本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店诚担运费调换</span></div>
+				<span>Wechat</span>
+			</div>
+			<div>
+				<div><img src="./IMG/tea.png" style="height: 100px;width: 88px;"></div>
+				<br><span>Social&nbsp;APP</span>
+				<div><img src="./IMG/buttonImg/zhifu4.png" style="height: 20px;width: 115px;"></div>
+			</div>
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			<script src="JS/event.js"></script>
+			<script>
+				var arr = JSON.parse(window.localStorage.getItem('ShoppingCart')) 
+	
+				var money = 0
+				for (var key in arr) { //循环次数为数组对象的长度3
+					var tr = $('tr#clone').clone(true)
+					$(tr).removeAttr('id')
+					$(tr).removeAttr('style')
+					tr.find('img').attr('src', arr[key].url)
+					tr.find('span').eq(1).html(arr[key].name) //商品名称
+					tr.find('span').eq(2).html(arr[key].price) //商品价格
+					tr.find('span').eq(3).html(arr[key].sum) //商品数量
+
+					var price = parseInt(arr[key].price.substr(1))
+					var sum_price = arr[key].sum * price
+					money = money + sum_price
+					tr.find('span').eq(4).html('￥' + sum_price) //商品总价
+
+					$('div.form>table>tbody').append(tr)
+
+				}
+				//更改总价
+				$('div>div.order span').eq(1).html('￥' + money)
+				$('div>div.order span').eq(5).html('￥' + money)
+
+				$('span.remove').click(function() {
+					
+					var tea_name = $(this).next().next().html() //获取该商品名称
+					$(this).parent().parent().remove() //获取该商品的li
+					for (var key in arr) { //查找对应元素
+						var i = parseInt(key)
+						if (arr[key].name == tea_name) {
+							arr.splice(i, 1)
+							window.localStorage.setItem('ShoppingCart', JSON.stringify(arr)) //重新更新缓存数据
+							window.location.assign('shoppingCart.html')
+							break;
+						}
+					}
+
+				})
+				
+				$('	div.form>div.order>input').click(function(){
+					window.location.assign('order.html')
+				})
+				
+			</script>
+		</div>
+	</body>
+</html>
