@@ -90,6 +90,7 @@ div>div.navigate {
 	/* background-image: url('../IMG/bg.jpg'); */
 	border: 2px dotted #ccc;
 	overflow: hidden;
+	z-index: 1000;  /*增加样式层级度，解决吸顶导航的问题。*/
 }
 
 div>div.navigate>input {
